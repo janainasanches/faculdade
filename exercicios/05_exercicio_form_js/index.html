@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício Formulário</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="arquivo.js"></script>
+</head>
+
+<body>
+    <form style="width: 700px;margin-left: 20px;" name="Cadastro" onsubmit="return validar();">
+        <h1 class="título_principal">
+            Cadastre seu currículo
+        </h1>
+        <h2 class="título_subtítulo">
+            1. Dados Pessoais
+        </h2>
+        <table>
+            <tr>
+                <td class="labels">
+                    Nome
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura" type="text" placeholder="Digite seu nome" id="nome" required
+                        name="Nome" />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Data de nascimento
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura" type="date" />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Estado Civil
+                </td>
+                <td class="inputs">
+                    <select name="estado_civil" id="estado_civil" class="largura_altura">
+                        <option selected value="">Selecione o estado civil</option>
+                        <option value="solteiro">Solteiro</option>
+                        <option value="casado">Casado</option>
+                        <option value="viúvo">Viúvo</option>
+                        <option value="divorciado">Divorciado</option>
+                    </select>
+                    <p style="color: red; font-weight: bold;" id="erro">
+
+                    </p>
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Sexo
+                </td>
+                <td class="inputs">
+                    <label class="radio-inline">
+                        <input type="radio" name="Sexo" /> Masculino
+                    </label>
+                    <label class="radio-inline">
+                        <input type="radio" name="Sexo" /> Feminino
+                    </label>
+                </td>
+            </tr>
+        </table>
+        <h2 class="título_subtítulo">
+            2. Objetivo
+        </h2>
+        <table>
+            <tr>
+                <td class="labels">
+                    Objetivo
+                </td>
+                <td class="inputs">
+                    <textarea sytle="margin: 0px 0px 0px 0px;" name="objetivo" cols="60" rows="3" id="objetivo" required
+                        placeholder="Digite seu objetivo" onchange='this.value=this.value.toLowerCase();'></textarea>
+                </td>
+            </tr>
+        </table>
+        <h2 class="título_subtítulo">
+            3. Contato
+        </h2>
+        <table>
+            <tr>
+                <td class="labels">
+                    Endereço
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura" type="text" placeholder="Digite seu endereço" required />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Cidade/Estado
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura_meio" type="text" placeholder="Digite sua cidade" required /> / &nbsp;
+                    <input class="largura_altura_meio" type="text" placeholder="Digite seu estado" required />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    CEP
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura" type="text" placeholder="Digite seu CEP no formato 99999-999" />
+
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Telefone
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura" type="text" id="telefone"
+                        placeholder="Digite seu telefone no formato (99) 9999-9999" />
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    E-mail
+                </td>
+                <td class="inputs">
+                    <input class="largura_altura" type="email" id="email" placeholder="Digite seu e-mail" />
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Rede Social
+                </td>
+                <td class="inputs">
+                    <img src="./face.png"> http://facebook.com/
+                    <input class="largura_altura_meio" type="text" placeholder="Perfil facebook " /> <br>
+                    <img src="./linkedin.png"> http://linkedin.com/
+                    <input class="largura_altura_meio" type="text" placeholder="Perfil linkedin" /> <br>
+                    <img src="./skype.png">
+                    <input class="largura_altura_meio" type="text" placeholder="Perfil skype" />
+                </td>
+            </tr>
+        </table>
+        <h2 class="título_subtítulo">
+            4. Conhecimentos
+        </h2>
+        <table>
+            <tr>
+                <td class="labels">
+                    Linguagem de Programação
+                </td>
+                <td class="inputs">
+                    <input type="checkbox" name="conhecimento" value="C/C++" />C/C++<br>
+                    <input type="checkbox" name="conhecimento" value="Java" />Java<br>
+                    <input type="checkbox" name="conhecimento" value="Visual Basic" />Visual Basic<br>
+                    <input type="checkbox" name="conhecimento" value=".Net" />.Net<br>
+                    <input type="checkbox" name="conhecimento" value="PHP" />PHP<br>
+                    <input type="checkbox" name="conhecimento" value="Python" />Python<br>
+                    <input type="checkbox" name="conhecimento" value="HTML" /> HTML
+                </td>
+            </tr>
+            <tr>
+                <td class="labels">
+                    Idiomas
+                </td>
+                <td class="inputs">
+                    Inglês
+                    <select name="Inglês" id="Inglês" class="largura_altura_meio">
+                        <option selected value="">Nível</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
+                    </select>
+                    | Espanhol
+                    <select name="Espanhol" id="Espanhol" class="largura_altura_meio">
+                        <option selected value="">Nível</option>
+                        <option value="Básico">Básico</option>
+                        <option value="Intermediário">Intermediário</option>
+                        <option value="Avançado">Avançado</option>
+                    </select>
+
+
+                </td>
+            </tr>
+        </table>
+        <input type="reset" value="Limpar" onclick="return limpar();"> |
+        <input type="submit" value="Enviar">
+
+
+    </form>
+</body>
+
+</html>

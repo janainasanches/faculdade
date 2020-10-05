@@ -1,0 +1,47 @@
+body
+{
+    background-color:#a3def8 ;
+    margin-left : 30px;
+    margin-right: 30px;
+}
+.foto
+{
+    margin-left: 10px;
+    margin-top: -70px;
+}
+.ClassePrincipal
+{
+    text-transform: capitalize;
+    margin-left: 170px;
+    margin-top: -50px;
+}
+.linkdireta
+{
+    display: block;
+    float: right;
+    margin-right: 40px;
+}
+
+.serif {
+    font-family: "Times New Roman", Times, serif;
+  }
+  
+  .sansserif {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .monospace {
+    font-family: "Lucida Console", Courier, monospace;
+  }
+
+  h1 {
+    font-size: 45px;
+  }
+  
+  h2 {
+    font-size: 35px;
+  }
+  
+  p {
+    font-size: 18px;
+  }
